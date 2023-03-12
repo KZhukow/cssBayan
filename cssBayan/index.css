@@ -53,6 +53,22 @@ body {
   transition: 0.2s;
 }
 
+#cardControl1:checked ~ #row1:active,
+#cardControl2:checked ~ #row2:active,
+#cardControl3:checked ~ #row3:active,
+#cardControl4:checked ~ #row4:active,
+#cardControl5:checked ~ #row5:active {
+  background-color: rgb(155, 103, 103, 0.5);
+}
+
+.cardContainer:active {
+  background-color: rgba(128, 128, 128, 0.5);
+}
+
+.cardContainer:active .cardImageContainer {
+  opacity: 0.5;
+}
+
 .cardTitleRow {
   display: flex;
   flex-direction: row;
