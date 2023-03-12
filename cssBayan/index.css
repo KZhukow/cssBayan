@@ -135,3 +135,53 @@ body {
     padding: 0.5em 1.5em;
   }
 }
+
+@media screen and (min-width: 1366px) {
+
+  :root {
+    --imgWidth: 35%;
+    --imgMarginBottom: 0.5em;
+  }
+
+  .title {
+    font-size: 3.5rem;
+  }
+
+  .allCardsContainer {
+    font-size: 1.75rem;
+  }
+
+  .cardTitleRow {
+    padding: 0.5em 1.5em;
+  }
+
+  #row1:hover .cardImage,
+  #row2:hover .cardImage,
+  #row3:hover .cardImage,
+  #row4:hover .cardImage,
+  #row5:hover .cardImage {
+    width: var(--imgWidth);
+    margin-bottom: var(--imgMarginBottom);
+  }
+
+  .cardIcon {
+    visibility: hidden;
+  }
+
+  .cardContainer:hover {
+    cursor: pointer;
+  }
+
+  .allCardsContainer:hover .cardIcon {
+    visibility: visible;
+  }
+
+  .cardTitle, .cardDescription {
+    color: #bfbfbf;
+  }
+
+  .allCardsContainer:hover .cardTitle,
+  .allCardsContainer:hover .cardDescription {
+    color: #f3f3f4;
+  }
+}
