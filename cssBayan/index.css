@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #f3f3f4;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 0.25rem;
+  background: rgb(84, 244, 255);
+}
+
+::-webkit-scrollbar {
+  background: rgb(60, 126, 131);
+  width: 0.5rem;
+}
+
+body {
+    background: #25282a url(./assets/background/catsMask.svg);
+    overflow-x: hidden;
+}
+
+:root {
+  --imgWidth: 60%;
+  --imgMarginBottom: 0.5em;
+}
+
+.hidden {
+  display: none;
+}
+
+.title {
+  align-self: flex-start;
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 2% 3%;
+}
+
+.allCardsContainer {
+  width: 100%;
+  font-size: 1rem;
+}
+
+.cardContainer {
+  display: block;
+  transition: 0.2s;
+}
+
+.cardTitleRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.25em 0.75em;
+  border-top: solid grey 1px;
+}
+
+.cardTitle {
+  font-size: 1.25em;
+}
+
+.cardDescription {
+  display: inline;
+  font-size: .75em;
+  font-style: italic;
+}
+
+.cardIcon {
+  font-size: 1em;
+  transform: rotate(45deg);
+  margin-left: 0.5em;
+  transition: transform 0.5s;
+}
+
+.cardImageContainer {
+  display: flex;
+  justify-content: center;
+  user-select: none;
+}
+
+.cardImage {
+  transition: 0.5s;
+  width: 0;
+  border-radius: 0.5em;
+}
