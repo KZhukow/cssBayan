@@ -200,4 +200,8 @@ body {
   .allCardsContainer:hover .cardDescription {
     color: #f3f3f4;
   }
+
+  .cardContainer:hover .cardIcon {
+    transform: none;
+  }
 }
