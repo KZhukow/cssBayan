@@ -75,7 +75,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 0.25em 0.75em;
-  border-top: solid grey 1px;
+  border-top: solid grey 0.0625rem;
 }
 
 .cardTitle {
