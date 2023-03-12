@@ -1,0 +1,207 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #f3f3f4;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 0.25rem;
+  background: rgb(84, 244, 255);
+}
+
+::-webkit-scrollbar {
+  background: rgb(60, 126, 131);
+  width: 0.5rem;
+}
+
+body {
+    background: #25282a url(./assets/background/catsMask.svg);
+    overflow-x: hidden;
+}
+
+:root {
+  --imgWidth: 60%;
+  --imgMarginBottom: 0.5em;
+}
+
+.hidden {
+  display: none;
+}
+
+.title {
+  align-self: flex-start;
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 2% 3%;
+}
+
+.allCardsContainer {
+  width: 100%;
+  font-size: 1rem;
+}
+
+.cardContainer {
+  display: block;
+  transition: 0.2s;
+}
+
+#cardControl1:checked ~ #row1:active,
+#cardControl2:checked ~ #row2:active,
+#cardControl3:checked ~ #row3:active,
+#cardControl4:checked ~ #row4:active,
+#cardControl5:checked ~ #row5:active {
+  background-color: rgb(155, 103, 103, 0.5);
+}
+
+.cardContainer:active {
+  background-color: rgba(128, 128, 128, 0.5);
+}
+
+.cardContainer:active .cardImageContainer {
+  opacity: 0.5;
+}
+
+.cardTitleRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.25em 0.75em;
+  border-top: solid grey 0.0625rem;
+}
+
+.cardTitle {
+  font-size: 1.25em;
+}
+
+.cardDescription {
+  display: inline;
+  font-size: .75em;
+  font-style: italic;
+}
+
+.cardIcon {
+  font-size: 1em;
+  transform: rotate(45deg);
+  margin-left: 0.5em;
+  transition: transform 0.5s;
+}
+
+#cardControl1:checked ~ #row1 .cardIcon,
+#cardControl2:checked ~ #row2 .cardIcon,
+#cardControl3:checked ~ #row3 .cardIcon,
+#cardControl4:checked ~ #row4 .cardIcon,
+#cardControl5:checked ~ #row5 .cardIcon {
+  transform: none;
+}
+
+.cardImageContainer {
+  display: flex;
+  justify-content: center;
+  user-select: none;
+}
+
+.cardImage {
+  transition: 0.5s;
+  width: 0;
+  border-radius: 0.5em;
+}
+
+#cardControl1:checked ~ #row1 .cardImage,
+#cardControl2:checked ~ #row2 .cardImage,
+#cardControl3:checked ~ #row3 .cardImage,
+#cardControl4:checked ~ #row4 .cardImage,
+#cardControl5:checked ~ #row5 .cardImage {
+  width: var(--imgWidth);
+  margin-bottom: var(--imgMarginBottom);
+}
+
+#cardControl1:checked ~ #row1 *,
+#cardControl2:checked ~ #row2 *,
+#cardControl3:checked ~ #row3 *,
+#cardControl4:checked ~ #row4 *,
+#cardControl5:checked ~ #row5 * {
+  color:rgb(84, 244, 255);
+}
+
+@media screen and (min-width: 768px) and (max-width: 1365px) {
+
+  :root {
+    --imgWidth: 45%;
+    --imgMarginBottom: 0.5em;
+  }
+
+  .title {
+    font-size: 2.75rem;
+  }
+
+  .allCardsContainer {
+    font-size: 1.5rem;
+  }
+
+  .cardTitleRow {
+    padding: 0.5em 1.5em;
+  }
+}
+
+@media screen and (min-width: 1366px) {
+
+  :root {
+    --imgWidth: 35%;
+    --imgMarginBottom: 0.5em;
+  }
+
+  .title {
+    font-size: 3.5rem;
+  }
+
+  .allCardsContainer {
+    font-size: 1.75rem;
+  }
+
+  .cardTitleRow {
+    padding: 0.5em 1.5em;
+  }
+
+  #row1:hover .cardImage,
+  #row2:hover .cardImage,
+  #row3:hover .cardImage,
+  #row4:hover .cardImage,
+  #row5:hover .cardImage {
+    width: var(--imgWidth);
+    margin-bottom: var(--imgMarginBottom);
+  }
+
+  .cardIcon {
+    visibility: hidden;
+  }
+
+  .cardContainer:hover {
+    cursor: pointer;
+  }
+
+  .allCardsContainer:hover .cardIcon {
+    visibility: visible;
+  }
+
+  .cardTitle, .cardDescription {
+    color: #bfbfbf;
+  }
+
+  .allCardsContainer:hover .cardTitle,
+  .allCardsContainer:hover .cardDescription {
+    color: #f3f3f4;
+  }
+
+  .cardContainer:hover .cardIcon {
+    transform: none;
+  }
+}
