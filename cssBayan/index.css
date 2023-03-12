@@ -115,3 +115,23 @@ body {
 #cardControl5:checked ~ #row5 * {
   color:rgb(84, 244, 255);
 }
+
+@media screen and (min-width: 768px) and (max-width: 1365px) {
+
+  :root {
+    --imgWidth: 45%;
+    --imgMarginBottom: 0.5em;
+  }
+
+  .title {
+    font-size: 2.75rem;
+  }
+
+  .allCardsContainer {
+    font-size: 1.5rem;
+  }
+
+  .cardTitleRow {
+    padding: 0.5em 1.5em;
+  }
+}
