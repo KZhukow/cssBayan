@@ -79,6 +79,14 @@ body {
   transition: transform 0.5s;
 }
 
+#cardControl1:checked ~ #row1 .cardIcon,
+#cardControl2:checked ~ #row2 .cardIcon,
+#cardControl3:checked ~ #row3 .cardIcon,
+#cardControl4:checked ~ #row4 .cardIcon,
+#cardControl5:checked ~ #row5 .cardIcon {
+  transform: none;
+}
+
 .cardImageContainer {
   display: flex;
   justify-content: center;
@@ -89,4 +97,21 @@ body {
   transition: 0.5s;
   width: 0;
   border-radius: 0.5em;
+}
+
+#cardControl1:checked ~ #row1 .cardImage,
+#cardControl2:checked ~ #row2 .cardImage,
+#cardControl3:checked ~ #row3 .cardImage,
+#cardControl4:checked ~ #row4 .cardImage,
+#cardControl5:checked ~ #row5 .cardImage {
+  width: var(--imgWidth);
+  margin-bottom: var(--imgMarginBottom);
+}
+
+#cardControl1:checked ~ #row1 *,
+#cardControl2:checked ~ #row2 *,
+#cardControl3:checked ~ #row3 *,
+#cardControl4:checked ~ #row4 *,
+#cardControl5:checked ~ #row5 * {
+  color:rgb(84, 244, 255);
 }
